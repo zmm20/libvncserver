@@ -33,7 +33,7 @@ install:
   - 7z x db-4.1.25.tar.gz -so | 7z x -si -ttar > nul
   - move db-4.1.25 db
   - cd db\build_win32
-  - C:\"Program Files (x86)"\"Microsoft Visual Studio 12.0"\Common7\IDE\devenv.exe db_dll.dsp /upgrade
+  - C:\"Program Files (x86)"\"Microsoft Visual Studio 14.0"\Common7\IDE\devenv.exe db_dll.dsp /upgrade
   - msbuild /p:Configuration=Release db_dll.vcxproj
   - cd ..\..
   # Cyrus SASL
