@@ -37,7 +37,7 @@ install:
   - move db-4.1.25 db
   - cd db\build_win32
   - echo using devenv %DEVENV_EXE%
-  - '"%DEVENV_EXE%" db_dll.dsp /upgrade'
+  - '%DEVENV_EXE% db_dll.dsp /upgrade'
   - msbuild /p:Configuration=Release db_dll.vcxproj
   - cd ..\..
   # Cyrus SASL
