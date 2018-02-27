@@ -5,9 +5,9 @@
 environment:
   matrix:
     - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2013
-      DEVENV_EXE: C:\"Program Files (x86)"\"Microsoft Visual Studio 12.0"\Common7\IDE\devenv.exe
+      DEVENV_EXE: %vs120comntools%\devenv.exe
     - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-      DEVENV_EXE: C:\"Program Files (x86)"\"Microsoft Visual Studio 14.0"\Common7\IDE\devenv.exe
+      DEVENV_EXE: %vs140comntools%\devenv.exe
 
 #init:
 #  - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
