@@ -51,7 +51,6 @@ install:
   - move cyrus-sasl-b6767cc9592c21ed42504ababa9e1a3b7c026fde sasl
   - cd sasl\plugins
   - sh makeinit.sh
-  - dir
   - cd ..
   - echo using vsdevcmd %VSDEVCMD_BAT%
   - '%VSDEVCMD_BAT%'
