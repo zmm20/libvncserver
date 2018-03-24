@@ -49,7 +49,9 @@ install:
   - curl -fsSL -o cyrus-sasl-b6767cc9592c21ed42504ababa9e1a3b7c026fde.zip https://github.com/cyrusimap/cyrus-sasl/archive/b6767cc9592c21ed42504ababa9e1a3b7c026fde.zip
   - 7z x cyrus-sasl-b6767cc9592c21ed42504ababa9e1a3b7c026fde.zip
   - move cyrus-sasl-b6767cc9592c21ed42504ababa9e1a3b7c026fde sasl
-  - cd sasl
+  - cd sasl\plugins
+  - sh makeinit.sh
+  - cd ..
   - echo using vsdevcmd %VSDEVCMD_BAT%
   - '%VSDEVCMD_BAT%'
   - nmake /f NTMakefile OPENSSL_INCLUDE=c:\OpenSSL-Win32\include OPENSSL_LIBPATH=c:\OpenSSL-Win32\lib DB_INCLUDE=c:\projects\libvncserver\deps\db\build_win32 DB_LIBPATH=c:\projects\libvncserver\deps\db\build_win32\release DB_LIB=libdb41.lib install
